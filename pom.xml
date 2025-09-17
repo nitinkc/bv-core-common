@@ -4,7 +4,10 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bitvelocity</groupId>
   <artifactId>bv-core-common</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>Core Common</name>
 
   <distributionManagement>
@@ -15,21 +18,20 @@
     </repository>
   </distributionManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.bit.velocity</groupId>
-      <artifactId>bv-platform-bom</artifactId>
-      <version>1.0.0</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-    </dependency>
-  </dependencies>
+  <parent>
+    <groupId>com.github.nitinkc</groupId>
+    <artifactId>bit-velocity-parent</artifactId>
+    <version>release-01.3</version>
+    <relativePath/> <!-- Forces Maven to fetch from remote, not local file -->
+  </parent>
+
+  <!-- Aggregator POM should not have dependencies. If needed, move these to child modules. -->
+  <modules>
+    <module>bv-common-entities</module>
+    <module>bv-common-events</module>
+    <module>bv-common-security</module>
+    <module>bv-common-auth</module>
+    <module>bv-common-logging</module>
+    <module>bv-common-exceptions</module>
+  </modules>
 </project>
