@@ -1,31 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bitvelocity</groupId>
+  <parent>
+    <groupId>com.github.nitinkc</groupId>
+    <artifactId>bv-core-parent</artifactId>
+    <version>release-1.1.0</version>
+    <relativePath/> <!-- or set to ../bv-core-parent/pom.xml if local -->
+  </parent>
+
+  <groupId>com.bit.velocity</groupId>
   <artifactId>bv-core-common</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Core Common</name>
 
-  <distributionManagement>
+  <repositories>
     <repository>
-      <id>github</id>
-      <name>GitHub BitVelocity Packages</name>
-      <url>https://maven.pkg.github.com/nitinkc/bv-core-common</url>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
     </repository>
-  </distributionManagement>
+  </repositories>
 
-  <parent>
-    <groupId>com.github.nitinkc</groupId>
-    <artifactId>bit-velocity-parent</artifactId>
-    <version>release-01.3</version>
-    <relativePath/> <!-- Forces Maven to fetch from remote, not local file -->
-  </parent>
-
-  <!-- Aggregator POM should not have dependencies. If needed, move these to child modules. -->
   <modules>
     <module>bv-common-entities</module>
     <module>bv-common-events</module>
