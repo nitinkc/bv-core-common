@@ -1,2 +1,12 @@
 .idea/
-.vscode
+.vscode/
+*/.target/
+*.iml
+out/
+/bv-common-auth/target/
+/bv-common-entities/target/
+/bv-common-security/target/
+/bv-common-logging/target/
+/bv-common-exceptions/target/
+/bv-common-events/target/
+/bv-common-events/target/

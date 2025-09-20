@@ -4,13 +4,6 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.github.nitinkc</groupId>
-    <artifactId>bv-core-parent</artifactId>
-    <version>release-1.1.0</version>
-    <relativePath/> <!-- or set to ../bv-core-parent/pom.xml if local -->
-  </parent>
-
   <groupId>com.bit.velocity</groupId>
   <artifactId>bv-core-common</artifactId>
   <version>1.0-SNAPSHOT</version>
@@ -24,6 +17,12 @@
     </repository>
   </repositories>
 
+  <parent>
+    <groupId>com.github.nitinkc</groupId>
+    <artifactId>bv-core-parent</artifactId>
+    <version>0.0.8-SNAPSHOT</version>
+    <relativePath/> <!-- or set to ../bv-core-parent/pom.xml if local -->
+  </parent>
   <modules>
     <module>bv-common-entities</module>
     <module>bv-common-events</module>
