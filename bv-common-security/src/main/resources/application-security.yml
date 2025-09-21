@@ -1,0 +1,44 @@
+# BitVelocity Common Security Configuration
+
+# JWT Configuration
+bitvelocity:
+  security:
+    jwt:
+      # JWT secret key - CHANGE THIS IN PRODUCTION!
+      # Should be loaded from environment variables or secret management
+      secret: ${JWT_SECRET:bitvelocity-default-secret-key-change-in-production-minimum-256-bits-required-for-hs256}
+      
+      # Token expiration times
+      access-token-expiry: PT1H  # 1 hour
+      refresh-token-expiry: P7D  # 7 days
+      
+      # JWT metadata
+      issuer: ${JWT_ISSUER:bitvelocity}
+      audience: ${JWT_AUDIENCE:bitvelocity-api}
+      
+      # Validation settings
+      validate-expiration: true
+      clock-skew: PT1M  # 1 minute tolerance
+
+# Security settings
+security:
+  # Rate limiting for authentication endpoints
+  auth:
+    rate-limit:
+      enabled: true
+      max-attempts: 5
+      window-duration: PT15M  # 15 minutes
+      
+  # Password policy
+  password:
+    min-length: 8
+    max-length: 128
+    require-uppercase: true
+    require-lowercase: true
+    require-digits: true
+    require-special-chars: true
+    
+  # Session management
+  session:
+    timeout: PT8H  # 8 hours
+    concurrent-sessions: 3
