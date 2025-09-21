@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: bitvelocity
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  redpanda:
+    image: redpandadata/redpanda:v24.1.3
+    ports:
+      - "9092:9092"
+    command:
+      - redpanda start --overprovisioned --smp 1 --memory 1G --reserve-memory 0M --node-id 0 --check=false
+

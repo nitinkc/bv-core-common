@@ -10,6 +10,8 @@
   <packaging>pom</packaging>
   <name>Core Common</name>
 
+  <!--  Only for Jitpack. Jitpack uses a different java version.
+   For Module level, parent pom has the right java version for BitVelocity -->
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
