@@ -40,7 +40,7 @@ jobs:
           java-version: '21'
           distribution: 'zulu'
           cache: 'maven'
-          cache-dependency-path: 'sub-project/pom.xml'
+          # cache-dependency-path: 'sub-project/pom.xml'
           server-id: github
           settings-path: ${{ github.workspace }}
       - name: Build with Maven
