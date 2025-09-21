@@ -12,6 +12,21 @@
     <name>BV Common Security</name>
     <description>Shared security utilities including JWT, password hashing, and security context</description>
 
+    <repositories>
+      <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+      </repository>
+    </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/nitinkc/bv-core-common</url>
+    </repository>
+  </distributionManagement>
+
     <dependencies>
         <!-- JWT -->
         <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
@@ -87,5 +102,6 @@
       </dependency>
 
     </dependencies>
+
 
 </project>
