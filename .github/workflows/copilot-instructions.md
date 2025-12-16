@@ -1,7 +1,7 @@
 # Copilot Instructions for BitVelocity Core Common Project
 
 ## Purpose
-This project (`bv-core-common`) is the foundational shared library for all BitVelocity backend services. It is intended to be used **as a JAR dependency** in subsequent projects (REST APIs, WebSockets, SSE, etc.) to provide:
+This project (`bv-core-common`) is the foundational-shared library for all BitVelocity backend services. It is intended to be used **as a JAR dependency** in subsequent projects (REST APIs, WebSockets, SSE, etc.) to provide:
 - **Authentication & Security**: UserContext, SecurityContextHolder, and related utilities for securing communication and enforcing authentication/authorization.
 - **Business Exception Handling**: Centralized, structured exception classes for consistent error handling across services.
 - **Eventing**: EventEnvelope and related event-driven architecture utilities.
