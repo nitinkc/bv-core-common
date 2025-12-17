@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.bit.velocity</groupId>
         <artifactId>bv-core-common</artifactId>
-        <version>1.9-SNAPSHOT</version>
+        <version>1.10-SNAPSHOT</version>
     </parent>
     <artifactId>bv-common-auth</artifactId>
     <packaging>jar</packaging>
